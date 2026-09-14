@@ -11,9 +11,9 @@
 
     <header class="border-bottom">
         <div class="container py-3 d-flex flex-column flex-sm-row justify-content-between align-items-start align-items-sm-center gap-2">
-            <div>
+            <div class="d-flex flex-wrap align-items-baseline gap-2">
                 <span class="fs-4 fw-bold">EduMax</span>
-                <span class="ms-2 text-secondary">Admin View</span>
+                <span class="text-secondary">Admin View</span>
             </div>
             <span>Admin User</span>
         </div>
@@ -36,7 +36,7 @@
 
             <main class="col-12 col-lg-9" id="main-content">
                 <nav aria-label="Breadcrumb">
-                    <ol class="breadcrumb">
+                    <ol class="breadcrumb small">
                         <li class="breadcrumb-item"><a href="#">Home</a></li>
                         <li class="breadcrumb-item"><a href="#">Announcements</a></li>
                         <li class="breadcrumb-item active" aria-current="page">Add announcement</li>
@@ -44,39 +44,41 @@
                 </nav>
 
                 <h1>Add announcement</h1>
-                <p class="text-secondary">Create a new announcement for EduMax members.</p>
+                <p class="text-secondary mb-4">Create a new announcement for EduMax members.</p>
 
-                <h2 class="h4" id="announcement-details">Announcement details</h2>
+                <section class="border rounded p-3 p-md-4" aria-labelledby="announcement-details">
+                    <h2 class="h4 mb-3" id="announcement-details">Announcement details</h2>
 
-                <form method="post" action="https://students.open.ac.uk/mct/tm252/reflect/reflect.php" aria-labelledby="announcement-details">
-                    <input type="hidden" name="item_ID" value="30001000-5000-654321fedcba">
+                    <form method="post" action="https://students.open.ac.uk/mct/tm252/reflect/reflect.php" aria-labelledby="announcement-details">
+                        <input type="hidden" name="item_ID" value="30001000-5000-654321fedcba">
 
-                    <div class="row g-3">
-                        <div class="col-12">
-                            <label for="announcement_title" class="form-label">Announcement title</label>
-                            <input type="text" class="form-control" id="announcement_title" name="announcement_title" value="Welcome to the new study term" aria-describedby="title-help">
-                            <div id="title-help" class="form-text">Enter a short title for the announcement.</div>
-                        </div>
+                        <div class="row g-3">
+                            <div class="col-12">
+                                <label for="announcement_title" class="form-label">Announcement title</label>
+                                <input type="text" class="form-control" id="announcement_title" name="announcement_title" value="Welcome to the new study term" aria-describedby="title-help">
+                                <div id="title-help" class="form-text">Enter a short title for the announcement.</div>
+                            </div>
 
-                        <div class="col-12">
-                            <label for="announcement_message" class="form-label">Announcement message</label>
-                            <textarea class="form-control" id="announcement_message" name="announcement_message" rows="6" aria-describedby="message-help">Welcome to EduMax. Please check your module pages for new learning activities and updates.</textarea>
-                            <div id="message-help" class="form-text">Enter the message that members will see.</div>
-                        </div>
+                            <div class="col-12">
+                                <label for="announcement_message" class="form-label">Announcement message</label>
+                                <textarea class="form-control" id="announcement_message" name="announcement_message" rows="6" aria-describedby="message-help">Welcome to EduMax. Please check your module pages for new learning activities and updates.</textarea>
+                                <div id="message-help" class="form-text">Enter the message that members will see.</div>
+                            </div>
 
-                        <div class="col-12 col-sm-6 col-lg-4">
-                            <label for="publish_date" class="form-label">Publish date</label>
-                            <input type="date" class="form-control" id="publish_date" name="publish_date" value="2026-09-14" aria-describedby="date-help">
-                            <div id="date-help" class="form-text">Choose the date the announcement should be published.</div>
-                        </div>
+                            <div class="col-12 col-sm-6 col-lg-4">
+                                <label for="publish_date" class="form-label">Publish date</label>
+                                <input type="date" class="form-control" id="publish_date" name="publish_date" value="2026-09-14" aria-describedby="date-help">
+                                <div id="date-help" class="form-text">Choose the date the announcement should be published.</div>
+                            </div>
 
-                        <div class="col-12">
-                            <div class="d-grid d-sm-block">
-                                <button type="submit" class="btn btn-primary">Save announcement</button>
+                            <div class="col-12">
+                                <div class="d-grid d-sm-block">
+                                    <button type="submit" class="btn btn-primary">Save announcement</button>
+                                </div>
                             </div>
                         </div>
-                    </div>
-                </form>
+                    </form>
+                </section>
             </main>
         </div>
     </div>
