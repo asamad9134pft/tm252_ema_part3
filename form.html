@@ -44,7 +44,9 @@
                 <h1>Add announcement</h1>
                 <p class="text-secondary">Create a new announcement for EduMax members.</p>
 
-                <form>
+                <form method="post" action="https://students.open.ac.uk/mct/tm252/reflect/reflect.php">
+                    <input type="hidden" name="item_ID" value="30001000-5000-654321fedcba">
+
                     <div class="mb-3">
                         <label for="announcement_title" class="form-label">Announcement title</label>
                         <input type="text" class="form-control" id="announcement_title" name="announcement_title" value="Welcome to the new study term">
@@ -59,6 +61,8 @@
                         <label for="publish_date" class="form-label">Publish date</label>
                         <input type="date" class="form-control" id="publish_date" name="publish_date" value="2026-09-14">
                     </div>
+
+                    <button type="submit" class="btn btn-primary">Save announcement</button>
                 </form>
             </main>
         </div>
